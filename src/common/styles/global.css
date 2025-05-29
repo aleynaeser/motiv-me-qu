@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-wdxl-lubrifont: 'WDXL Lubrifont', sans-serif;
+
+  --color-white: #eeeeee;
+  --color-off-white: #c0c0c0;
+  --color-black: #000000;
+  --color-black-light: #0f0f0f;
+  --color-gray: #555555;
+  --color-accent: #e53aa3;
+}
