@@ -129,9 +129,9 @@ export interface SilkProps {
 }
 
 export const SilkBackground: React.FC<SilkProps> = ({
-  speed = 8,
-  scale = 0.6,
-  color = '#0f0f0f',
+  speed = 7,
+  scale = 1.2,
+  color = '#121212',
   noiseIntensity = 1.5,
   rotation = 0,
 }) => {
@@ -150,7 +150,7 @@ export const SilkBackground: React.FC<SilkProps> = ({
   );
 
   return (
-    <Canvas dpr={[1, 2]} frameloop='always' style={{ position: 'absolute', inset: 0 }}>
+    <Canvas dpr={[1, 2]} frameloop='always' style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
       <SilkPlane ref={meshRef} uniforms={uniforms} />
     </Canvas>
   );

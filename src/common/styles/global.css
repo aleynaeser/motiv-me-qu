@@ -3,10 +3,11 @@
 @theme {
   --font-wdxl-lubrifont: 'WDXL Lubrifont', sans-serif;
 
-  --color-white: #eeeeee;
-  --color-off-white: #c0c0c0;
-  --color-black: #000000;
-  --color-black-light: #0f0f0f;
-  --color-gray: #555555;
-  --color-accent: #e53aa3;
+  --color-white: oklch(95.26% 0.001 276.65);
+  --color-off-white: oklch(65.09% 0.009 276.39);
+  --color-black: oklch(0% 0 0);
+  --color-black-light: oklch(6.63% 0.004 276.6);
+  --color-gray: oklch(39.41% 0.007 276.54);
+  --color-accent: oklch(61.3% 0.268 342.76);
+  --color-accent-dark: oklch(0.18 0.0701 336.27);
 }

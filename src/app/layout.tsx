@@ -1,7 +1,8 @@
+import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import * as motion from 'motion/react-client';
-import { SilkBackground } from '@components/SilkBackgorund';
+import { SilkBackground } from '@/common/components/SilkBackground';
 import ReactQueryProvider from '@providers/ReactQueryProvider';
 
 import '@styles/global.css';
@@ -40,16 +41,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           suppressHydrationWarning
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className={`text-off-white relative flex h-full min-h-screen flex-col items-center justify-center bg-black text-sm`}
+          className={`relative flex h-full min-h-screen flex-col items-center justify-center bg-black`}
           transition={{ duration: 0.5, scale: { type: 'spring', visualDuration: 0.5, bounce: 0.5 } }}
         >
-          <main
-            className={`relative flex w-full max-w-3xl items-center justify-center overflow-hidden p-16 text-[var(--white)]`}
-          >
+          <main className={`relative z-50 flex w-full max-w-4xl items-center justify-center overflow-hidden p-4 text-white`}>
             {children}
           </main>
 
           <SilkBackground />
+          <Toaster />
         </motion.body>
       </ReactQueryProvider>
     </html>

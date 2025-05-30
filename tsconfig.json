@@ -21,6 +21,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@actions/*": ["./src/common/actions/*"],
+      "@lib/*": ["./src/common/lib/*"],
       "@components/*": ["./src/common/components/*"],
       "@providers/*": ["./src/common/providers/*"],
       "@styles/*": ["./src/common/styles/*"],
