@@ -13,7 +13,7 @@ export default function ActionBar() {
   });
 
   return (
-    <div className='flex items-center justify-center pt-8'>
+    <div className='flex items-center justify-center pt-10'>
       <motion.button
         whileTap={{ scale: 0.9 }}
         whileHover={{ scale: 1.1 }}

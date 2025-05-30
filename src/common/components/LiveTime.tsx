@@ -27,19 +27,18 @@ export default function LiveTime() {
   const digits = timeString.split('');
 
   return (
-    <div className='flex w-fit flex-col items-baseline p-6'>
-      <div className='text-off-white mb-2 flex w-full justify-between text-[12px]'>
-        <span>{dateString}</span>
-        <span>{weekdayString}</span>
+    <div className='flex w-fit flex-col items-baseline gap-4 p-10'>
+      <div className='text-off-white flex w-full flex-col items-center justify-center gap-2 text-[11px]'>
+        {dateString}, {weekdayString}
       </div>
 
       <div className='flex space-x-1'>
         {digits.map((digit, index) => (
-          <div key={index} className='relative flex h-16 w-6 items-center justify-center overflow-hidden'>
+          <div key={index} className='relative flex h-14 w-7 items-center justify-center overflow-hidden'>
             <AnimatePresence mode='wait' initial={false}>
               <motion.span
                 key={digit}
-                className='from-accent to-accent-dark absolute w-6 bg-gradient-to-r bg-clip-text text-center text-4xl text-transparent'
+                className='from-accent to-accent-dark absolute w-7 bg-gradient-to-r bg-clip-text text-center text-6xl text-transparent'
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}

@@ -44,7 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           className={`relative flex h-full min-h-screen flex-col items-center justify-center bg-black`}
           transition={{ duration: 0.5, scale: { type: 'spring', visualDuration: 0.5, bounce: 0.5 } }}
         >
-          <main className={`relative z-50 flex w-full max-w-4xl items-center justify-center overflow-hidden p-4 text-white`}>
+          <main className={`relative z-50 flex w-full max-w-6xl items-center justify-center overflow-hidden p-4 text-white`}>
             {children}
           </main>
 
