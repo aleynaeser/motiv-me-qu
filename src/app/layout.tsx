@@ -1,7 +1,7 @@
-import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import * as motion from 'motion/react-client';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SilkBackground } from '@/common/components/SilkBackground';
 import ReactQueryProvider from '@providers/ReactQueryProvider';
 
@@ -49,7 +49,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </main>
 
           <SilkBackground />
-          <Toaster />
+          <SpeedInsights />
         </motion.body>
       </ReactQueryProvider>
     </html>
