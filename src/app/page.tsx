@@ -12,8 +12,8 @@ export default async function MainPage() {
       <LiveTime />
 
       <div className='flex flex-col items-center justify-center gap-6'>
-        <BlurText text={`"${quote?.[0].q}"`} />
-        <BlurText text={`- ${quote?.[0].a}`} color='off-white' size='md' />
+        <BlurText text={`"${quote?.[0]?.q}"`} />
+        <BlurText text={`- ${quote?.[0]?.a}`} color='off-white' size='md' />
       </div>
 
       <ActionBar />

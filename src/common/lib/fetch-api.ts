@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use server';
 
-import { toast } from 'sonner';
-
 type THeaderConfig = { [key: string]: string };
 
 interface IApiConfig {
@@ -19,7 +17,7 @@ interface IApiConfig {
 }
 
 export const createConfig = async (config: IApiConfig) => {
-  const baseURL = process.env.NEXT_PUBLIC_SERVICE_URL + '/';
+  const baseURL = process.env.NEXT_PUBLIC_SERVICE_URI + '/';
   const path = config.path ? baseURL + config.path : baseURL;
 
   const headers: THeaderConfig = {
@@ -56,8 +54,7 @@ export async function baseFetch<T = any>(url: string, config: IApiConfig): Promi
     if (!response.ok) throw response;
     return response.json();
   } catch (error: any) {
-    toast.error(error.message);
-    return null;
+    return error;
   }
 }
 

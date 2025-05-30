@@ -1,6 +1,5 @@
 'use client';
 
-/* eslint-disable react/no-unknown-property */
 import { IUniform } from 'three';
 import { Color, Mesh, ShaderMaterial } from 'three';
 import { Canvas, useFrame, useThree, RootState } from '@react-three/fiber';
