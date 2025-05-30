@@ -7,7 +7,7 @@ import { useEffect, useRef, useState, useMemo } from 'react';
 type BlurTextProps = {
   text?: string;
   color?: 'white' | 'off-white';
-  size?: 'md' | '6xl';
+  size?: 'md' | '5xl';
   delay?: number;
   animateBy?: 'words' | 'letters';
   direction?: 'top' | 'bottom';
@@ -37,7 +37,7 @@ const BlurText: React.FC<BlurTextProps> = ({
   text = '',
   delay = 90,
   color = 'white',
-  size = '6xl',
+  size = '5xl',
   animateBy = 'words',
   direction = 'top',
   threshold = 0.1,
@@ -52,8 +52,11 @@ const BlurText: React.FC<BlurTextProps> = ({
   const elements = animateBy === 'words' ? text.split(' ') : text.split('');
   const [inView, setInView] = useState(false);
 
-  const textVariants = cva('blur-text flex flex-wrap items-center justify-center', {
-    variants: { size: { md: 'text-md', '6xl': 'text-6xl' }, color: { white: 'text-white', 'off-white': 'text-off-white' } },
+  const textVariants = cva('blur-text flex flex-wrap items-center justify-center pt-3', {
+    variants: {
+      size: { md: 'lg:text-md text-sm', '5xl': 'lg:text-5xl text-3xl' },
+      color: { white: 'text-white', 'off-white': 'text-off-white' },
+    },
   });
 
   useEffect(() => {

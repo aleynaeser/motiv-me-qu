@@ -6,7 +6,7 @@
   --color-white: oklch(0.82 0 0);
   --color-off-white: oklch(65.09% 0.009 276.39);
   --color-black: oklch(0% 0 0);
-  --color-black-light: oklch(6.63% 0.004 276.6);
+  --color-black-light: oklch(0.19 0 none);
   --color-gray: oklch(0.32 0.0053 286.1);
   --color-accent: oklch(61.3% 0.268 342.76);
   --color-accent-dark: oklch(0.19 0.0809 336.41);
